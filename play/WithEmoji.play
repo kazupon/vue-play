@@ -1,0 +1,15 @@
+<script>
+  import MyButton from './MyButton.vue'
+
+  export default {
+    //name: 'with-emoji',
+    scenario: 'with emoji',
+    template: `<my-button>🤔</my-button>`,
+    components: { MyButton }
+  }
+</script>
+
+<readme>
+documentation for with emoji
+</readme>
+

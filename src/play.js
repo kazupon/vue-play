@@ -16,11 +16,13 @@ const play = spot => {
 
   return {
     add(scenario, value) {
-      let component = value
+      let component = typeof scenario === 'object'
+        ? scenario
+        : value
       if (typeof value === 'string') {
-        component = {template: value}
+        component = {template: value, scenario}
       } else if (typeof value === 'function') {
-        component = {render: value}
+        component = {render: value, scenario}
       }
       component.example = component.example || component.template
 
@@ -43,7 +45,7 @@ const play = spot => {
 
       spots[displayName] = spots[displayName] || []
       spots[displayName].push({
-        scenario,
+        scenario: component.scenario,
         component
       })
       return this

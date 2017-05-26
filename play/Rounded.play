@@ -1,0 +1,15 @@
+<script>
+  import MyButton from './MyButton.vue'
+
+  export default {
+    //name: 'rounded',
+    scenario: 'rounded',
+    //template: `<my-button :rounded="true">rounded</my-button>`,
+    components: { MyButton }
+  }
+</script>
+
+<!-- NOTE: cannot register as 'example' due to compile 'template' to render function with vue-loader ... -->
+<template>
+  <my-button :rounded="true">rounded</my-button>
+</template>

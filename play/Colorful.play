@@ -1,0 +1,14 @@
+<script>
+  import MyButton from './MyButton.vue'
+
+  export default {
+    //name: 'colorful',
+    scenario: 'colorful',
+    components: { MyButton },
+    render (h) {
+      return h(MyButton, {
+        props: { color: 'pink' }
+      }, ['hello world'])
+    }
+  }
+</script>
